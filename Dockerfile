@@ -1,17 +1,17 @@
-FROM node
+#FROM node
 
-RUN apt-get update && apt-get upgrade -y \
+#RUN apt-get update && apt-get upgrade -y \
     && apt-get clean
 
-RUN mkdir /app
-WORKDIR /app
+#RUN mkdir /app
+#WORKDIR /app
 
-COPY package.json /app/
-RUN npm install --only=production
+#COPY package.json /app/
+#RUN npm install --only=production
 
-COPY src /app/src
+#COPY src /app/src
 
-EXPOSE 3000
+#EXPOSE 3000
 
-CMD [ "npm", "start" ]
+#CMD [ "npm", "start" ]
 
